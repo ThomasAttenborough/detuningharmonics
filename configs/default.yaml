@@ -1,0 +1,65 @@
+testname: Detuning Harmonics in a Saw Wave
+testId: default_example
+bufferSize: 2048
+stopOnErrors: true
+showButtonPreviousPage: true
+remoteService: service/write.php
+
+
+pages:
+    - type: generic
+      id: first_page
+      name: Welcome
+      content: Thank you for taking part in this test. This test requires a laptop or computer to work properly. Please ensure you use a decent pair of headphones or two monitor speakers. Also, make sure the volume is turned down as the samples are very loud and harsh.
+    - type: mushra
+      id: mono
+      name: Detuning Harmonics in a Saw Wave
+      content: Please rate the following conditions out of 100 when comparing the overall quality to that of the reference audio track. 
+      showWaveform: true
+      enableLooping: true 
+      reference: configs/resources/audio/stereo_ref.wav
+      createAnchor35: false
+      createAnchor70: false
+      stimuli:
+          C1: configs/resources/audio/mono_c1.wav
+          C2: configs/resources/audio/mono_c2.wav
+          C3: configs/resources/audio/mono_c3.wav
+          C4: configs/resources/audio/mono_c4.wav
+          C5: configs/resources/audio/mono_c5.wav
+          C6: configs/resources/audio/mono_c6.wav
+          C7: configs/resources/audio/mono_c7.wav
+          
+
+    - type: generic
+      id: second_page
+      name: 2nd
+      content: one more test to go!
+    - type: mushra
+      id: stereo
+      name: Detuning Harmonics in a Saw Wave
+      content: Please rate the following conditions out of 100 when comparing the overall quality to that of the reference audio track.
+      showWaveform: true
+      enableLooping: true 
+      reference: configs/resources/audio/stereo_ref.wav
+      createAnchor35: false
+      createAnchor70: false
+      stimuli:
+          C1: configs/resources/audio/stereo_c1.wav
+          C2: configs/resources/audio/stereo_c2.wav
+          C3: configs/resources/audio/stereo_c3.wav
+          C4: configs/resources/audio/stereo_c4.wav
+          C5: configs/resources/audio/stereo_c5.wav
+          C6: configs/resources/audio/stereo_c6.wav
+          C7: configs/resources/audio/stereo_c7.wav
+   
+     
+    - type: finish
+      name: Thank you
+      content: Thank you for attending!
+      showResults: false
+      writeResults: true
+      questionnaire:
+          - type: text
+            label: nickname
+            name: nickname
+          
