@@ -21,7 +21,7 @@ function sanitize($string = '', $is_filename = FALSE) {
 // Function to send data payload to Google Sheets via a Google Apps Script Web App
 function sendToGoogleSheet($sheet, $data) {
     // Replace with your actual Google Apps Script Web App URL
-    $webAppUrl = 'https://script.google.com/macros/s/AKfycbyrBpU51NzLq_BY50lL5fsvwbwZsqmLopfC8L6ZTrFECdfdrzyG4EPmAF4lgP73t_3s/exec';
+    $webAppUrl = 'https://script.google.com/macros/s/AKfycbzaDU1SZag-noh6Asy13HxoxERd0-RP1Tec6taDFkmO_NwVsqCFaI0IhrNdyi6KHsgp/exec';
     
     $payload = array(
         "sheet" => $sheet,
